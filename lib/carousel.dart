@@ -22,9 +22,9 @@ class Carousel extends StatefulWidget {
   Color activateIndicatorColor;
   Color unActivatedIndicatorColor;
   Color indicatorBarColor;
-  double indicatorBarColorOpacity;
+  double? indicatorBarColorOpacity;
   Carousel(
-      {@required this.items,
+      {required this.items,
       this.activateIndicatorColor = Colors.black,
       this.animationPageCurve = Curves.easeIn,
       this.animationPageDuration = Duration.zero,
@@ -48,8 +48,8 @@ class Carousel extends StatefulWidget {
 }
 
 class _CarouselState extends State<Carousel> {
-  PageController _pageController;
-  int _totleItem;
+  PageController? _pageController;
+  int? _totleItem;
   int _current = 0;
   @override
   void initState() {
@@ -61,8 +61,8 @@ class _CarouselState extends State<Carousel> {
               ? Duration(seconds: 1)
               : widget.autoScrollDuration, (timer) {
         if (_pageController != null) {
-          if (_current < _totleItem) {
-            _pageController.animateToPage(_current++,
+          if (_current < _totleItem!) {
+            _pageController!.animateToPage(_current++,
                 duration: widget.animationPageDuration == Duration.zero
                     ? Duration(milliseconds: 500)
                     : widget.animationPageDuration,
@@ -71,7 +71,7 @@ class _CarouselState extends State<Carousel> {
             if (widget.stopAtEnd) {
               timer.cancel();
             } else {
-              _pageController.jumpToPage(0);
+              _pageController!.jumpToPage(0);
             }
           }
         }
@@ -82,7 +82,7 @@ class _CarouselState extends State<Carousel> {
 
   @override
   void dispose() {
-    _pageController.dispose();
+    _pageController!.dispose();
     super.dispose();
   }
 

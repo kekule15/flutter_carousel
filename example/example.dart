@@ -1,4 +1,4 @@
-import 'package:carousel/carousel.dart';
+import 'package:flutter_image_slider/carousel.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -44,7 +44,8 @@ class _HomeState extends State<Home> {
                     color: Colors.yellow,
                   )
                 ],
-              ))
+              )
+              )
         ],
       ),
     );

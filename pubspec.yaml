@@ -1,11 +1,10 @@
-name: carousel
-description: It's a carousel package for image slider with a diffrent options.
-version: 0.0.1
-author: praveend
-homepage:
+name: flutter_image_slider
+description: It's a carousel package for image slider with a diffrent options, include null safety.
+version: 0.0.2
+homepage: https://github.com/praveen576232/flutter_carousel
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
