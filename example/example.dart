@@ -34,15 +34,7 @@ class _HomeState extends State<Home> {
                 autoScroll: true,
                 // widgets
                 items: [
-                  Container(
-                    color: Colors.blue,
-                  ),
-                  Container(
-                    color: Colors.green,
-                  ),
-                  Container(
-                    color: Colors.yellow,
-                  )
+                 
                 ],
               )
               )

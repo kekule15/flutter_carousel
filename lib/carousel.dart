@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'indicator/Circle.dart';
 
 class Carousel extends StatefulWidget {
-  List<Widget> items = [];
+  List<String> items = [];
   double height;
   double width;
   bool autoScroll;
@@ -108,7 +108,7 @@ class _CarouselState extends State<Carousel> {
                   height:
                       widget.height != 0.0 ? widget.height : size.height * 0.4,
                   width: widget.width != 0.0 ? widget.width : size.width,
-                  child: widget.items[index],
+                  child: Text(widget.items[index]),
                 );
               },
               onPageChanged: (int i) {
